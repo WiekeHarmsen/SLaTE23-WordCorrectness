@@ -1,0 +1,33 @@
+---
+title: "Reliability analysis teacher judgement experiment"
+subtitle: "DART - Experiment 2021"
+author: "Ferdy Hubers"
+date: "11-1-2022"
+output: 
+   rmdformats::robobook:
+    highlight: kate
+    df_print: paged
+    number_sections: true    
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = F, warning = F)
+library(tidyverse)
+library(broom)
+library(lme4)
+library(ggplot2)
+library(Hmisc)
+library(psych)
+library(ltm)
+library(reactable)
+```
+
+# Data preparation
+
+## Read in data
+
+```{r read files, message = F, class.source = 'fold-show'}
+datafile  <- read_delim("Data_teacher_judgement_experiment_processed.txt", "\t")
+
+```
